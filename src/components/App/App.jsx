@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ContactForm from '../ContactForm/ContactForm';
 import SearchBox from '../SearchBox/SearchBox';
 import ContactList from '../ContactList/ContactList';
-import userContacts from '../../data/userContacts.json';
 import { getLocal, setLocal } from '../LocalStorage/LocalStorage';
-import Container from '../Container/Container';
 import s from './App.module.css';
 
 const App = () => {
@@ -12,7 +10,7 @@ const App = () => {
     const savedContacts = getLocal('contacts');
     return savedContacts && Object.keys(savedContacts).length > 0
       ? savedContacts
-      : userContacts;
+      : [];
   });
   const [filter, setFilter] = useState('');
 
