@@ -19,7 +19,6 @@ const App = () => {
   }, [contacts]);
 
   const addContact = (newContact) => {
-    console.log(newContact);
     setContacts([...contacts, newContact]);
   };
 
